@@ -4,98 +4,162 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
+    <!--<ScrollView-->
+        <!--android:id="@+id/scrollView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fillViewport="true" >-->
 
-    <EditText
-        android:id="@+id/number1"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:hint="First Number"
-        android:textSize="25dp"
-        android:layout_marginLeft="60dp"
-        android:inputType="numberDecimal" />
-
-    <EditText
-        android:id="@+id/number2"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:hint="Second Number"
-        android:textSize="25dp"
-        android:inputType="numberDecimal"
-        android:layout_marginLeft="60dp" />
-
-    <Button
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="+"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="60dp"
-        android:onClick="add" />
-
-    <Button
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="-"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="150dp"
-        android:onClick="sub" />
-
-    <Button
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="*"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="240dp"
-        android:onClick="mul" />
-
-    <Button
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="/"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginTop="280dp"
-        android:layout_marginLeft="60dp"
-        android:onClick="div" />
-
-    <Button
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="%"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginTop="280dp"
-        android:layout_marginLeft="150dp"
-        android:onClick="remainder" />
-
-    <Button
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="Del"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginTop="280dp"
-        android:layout_marginLeft="240dp"
-        android:onClick="resetField" />
 
     <TextView
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:id="@+id/result"
-        android:layout_marginTop="400dp"
-        android:text="Result"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginLeft="60dp" />
+        android:id="@+id/equation"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:textSize="50dp"
+        android:background="#00000000" />
 
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="20dp"
+        android:layout_marginTop="120dp" />
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:background="@color/darkGrey">
+
+
+        <Button
+            android:id="@+id/seven"
+            android:text="7"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/eight"
+            android:text="8"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/nine"
+            android:text="9"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/four"
+            android:text="4"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/five"
+            android:text="5"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/six"
+            android:text="6"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/one"
+            android:text="1"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/two"
+            android:text="2"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/three"
+            android:text="3"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/dot"
+            android:text="."
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/zero"
+            android:text="0"
+            android:onClick="keyPressed"
+            style="@style/myButton1" />
+
+        <Button
+            android:id="@+id/equal"
+            android:text="="
+            style="@style/myButton1" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:columnCount="1"
+        android:rowCount="5"
+        android:layout_marginLeft="264dp"
+        android:background="@color/lightGrey" >
+
+
+        <Button
+            android:id="@+id/del"
+            android:text="DEL"
+            style="@style/myButton2" />
+
+        <Button
+            android:id="@+id/divide"
+            android:text="/"
+            style="@style/myButton2" />
+
+        <Button
+            android:id="@+id/multiply"
+            android:text="X"
+            style="@style/myButton2" />
+
+        <Button
+            android:id="@+id/minus"
+            android:text="-"
+            style="@style/myButton2" />
+
+        <Button
+            android:id="@+id/plus"
+            android:text="+"
+            style="@style/myButton2"
+            />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="20dp"
+        android:layout_height="340dp"
+        android:rowCount="1"
+        android:columnCount="1"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="339dp">
+    </GridLayout>
+
+    <!--</ScrollView>-->
 
 </RelativeLayout>
